@@ -27,4 +27,10 @@ void inicializar_nave(EstadoOrbitalLEO *nave) {
     
     nave->estabilidad_pct = 100.0f;
     nave->pruebas_superadas = 0;
+} 
+void mostrar_encabezado() {
+    printf("====================================================================\n");
+    printf("        SIMULADOR DE MISIONES ARTEMIS - UTN FRRe\n");
+    printf("    Modulo LEO: Insercion y Estabilidad en Orbita Terrestre Baja\n");
+    printf("====================================================================\n");
 }
