@@ -34,3 +34,11 @@ void mostrar_encabezado() {
     printf("    Modulo LEO: Insercion y Estabilidad en Orbita Terrestre Baja\n");
     printf("====================================================================\n");
 }
+void mostrar_menu() {
+    printf("\n--- PANEL DE CONTROL DE MISIÓN LEO ---\n");
+    printf("1. Demostrar Fuerzas y Calcular Velocidad Orbital\n");
+    printf("2. Calcular Periodo Orbital (T) de la Nave Orion\n");
+    printf("3. Evaluar Aceleracion Centripeta sobre Astronautas\n");
+    printf("4. Simular Pulso Propulsor Auxiliar Lateral (Evento Deriva)\n");
+    printf("5. Generar Reporte Final y Salir\n");
+} 
