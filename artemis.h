@@ -10,3 +10,15 @@
 #define RADIO_TIERRA 6371000.0   // m
 #define ALTITUD_LEO 192000.0     // m
 #define MASA_ORION 33000.0       // kg 
+
+typedef struct {
+    char nombre_mision[50];
+    double radio_orbital;        // r = RT + h
+    double velocidad_orbital;    // v (m/s)
+    double periodo_segundos;     // T (s)
+    double periodo_minutos;      // T (min)
+    double aceleracion_c;        // ac (m/s^2)
+    double desviacion_lateral;   // Delta y (m)
+    float estabilidad_pct;       // %
+    int pruebas_superadas;
+} EstadoOrbitalLEO;
