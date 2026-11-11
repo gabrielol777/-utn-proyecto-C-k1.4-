@@ -22,3 +22,13 @@ typedef struct {
     float estabilidad_pct;       // %
     int pruebas_superadas;
 } EstadoOrbitalLEO;
+void inicializar_nave(EstadoOrbitalLEO *nave);
+void mostrar_encabezado();
+void mostrar_menu();
+void ejecutar_fase_demostracion(EstadoOrbitalLEO *nave);
+void ejecutar_fase_calculo_periodo(EstadoOrbitalLEO *nave);
+void ejecutar_fase_aceleracion_centripeta(EstadoOrbitalLEO *nave);
+void ejecutar_fase_evento_propulsor(EstadoOrbitalLEO *nave);
+void generar_reporte_final(const EstadoOrbitalLEO *nave);
+
+#endif
