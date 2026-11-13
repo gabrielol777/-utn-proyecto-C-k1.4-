@@ -42,3 +42,18 @@ void mostrar_menu() {
     printf("4. Simular Pulso Propulsor Auxiliar Lateral (Evento Deriva)\n");
     printf("5. Generar Reporte Final y Salir\n");
 } 
+void ejecutar_fase_demostracion(EstadoOrbitalLEO *nave) {
+    printf("\n[FASE 1]: Analisis de Fuerza Gravitatoria como Fuerza Centripeta\n");
+    printf(" Demuestre el modulo de velocidad orbital v (m/s).\n");
+    
+    double respuesta = leer_flotante_seguro(" Ingrese la velocidad calculada (m/s): ", 1000.0, 20000.0);
+    
+    // Tolerancia del 1%
+    if (fabs(respuesta - nave->velocidad_orbital) < 100.0) {
+        printf(" -> [CORRECTO] Insercion en LEO exitosa. v = %.2f m/s\n", nave->velocidad_orbital);
+        nave->pruebas_superadas++;
+    } else {
+        printf(" -> [INCORRECTO] Desviacion critica. Valor real: %.2f m/s\n", nave->velocidad_orbital);
+        nave->estabilidad_pct -= 15.0f;
+    }
+}
