@@ -48,12 +48,23 @@ void ejecutar_fase_demostracion(EstadoOrbitalLEO *nave) {
     
     double respuesta = leer_flotante_seguro(" Ingrese la velocidad calculada (m/s): ", 1000.0, 20000.0);
     
-    // Tolerancia del 1%
     if (fabs(respuesta - nave->velocidad_orbital) < 100.0) {
         printf(" -> [CORRECTO] Insercion en LEO exitosa. v = %.2f m/s\n", nave->velocidad_orbital);
         nave->pruebas_superadas++;
     } else {
         printf(" -> [INCORRECTO] Desviacion critica. Valor real: %.2f m/s\n", nave->velocidad_orbital);
+        nave->estabilidad_pct -= 15.0f;
+    }
+}
+void ejecutar_fase_calculo_periodo(EstadoOrbitalLEO *nave) {
+    printf("\n[FASE 2]: Calculo del Periodo Orbital (T)\n");
+    double t_min = leer_flotante_seguro(" Ingrese el periodo T en MINUTOS: ", 10.0, 300.0);
+    
+    if (fabs(t_min - nave->periodo_minutos) < 2.0) {
+        printf(" -> [CORRECTO] T = %.2f s (%.2f minutos por vuelta)\n", nave->periodo_segundos, nave->periodo_minutos);
+        nave->pruebas_superadas++;
+    } else {
+        printf(" -> [INCORRECTO] Error de sincronizacion. Valor real: %.2f min\n", nave->periodo_minutos);
         nave->estabilidad_pct -= 15.0f;
     }
 }
