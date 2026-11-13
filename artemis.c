@@ -68,3 +68,28 @@ void ejecutar_fase_calculo_periodo(EstadoOrbitalLEO *nave) {
         nave->estabilidad_pct -= 15.0f;
     }
 }
+void ejecutar_fase_aceleracion_centripeta(EstadoOrbitalLEO *nave) {
+    printf("\n[FASE 3]: Evaluacion de Aceleracion Centripeta\n");
+    double ac = leer_flotante_seguro(" Ingrese la aceleracion centripeta (m/s^2): ", 1.0, 50.0);
+    
+    if (fabs(ac - nave->aceleracion_c) < 0.5) {
+        printf(" -> [CORRECTO] Aceleracion soportada por tripulacion: %.2f m/s^2\n", nave->aceleracion_c);
+        nave->pruebas_superadas++;
+    } else {
+        printf(" -> [INCORRECTO] Diagnostico erroneo. Valor real: %.2f m/s^2\n", nave->aceleracion_c);
+        nave->estabilidad_pct -= 15.0f;
+    }
+}
+
+void ejecutar_fase_evento_propulsor(EstadoOrbitalLEO *nave) {
+    printf("\n[ALERTA FASE 4]: Activacion de Propulsor Auxiliar Lateral (a = 0.50 m/s^2, dt = 10s)\n");
+    double dy = leer_flotante_seguro(" Ingrese la desviacion lateral instantanea dy (m): ", 0.0, 500.0);
+    
+    if (fabs(dy - nave->desviacion_lateral) < 1.0) {
+        printf(" -> [EXITO] Correccion efectuada. Desviacion calculada: %.2f m\n", nave->desviacion_lateral);
+        nave->pruebas_superadas++;
+    } else {
+        printf(" -> [FALLO] Deriva no compensada. Desviacion real: %.2f m\n", nave->desviacion_lateral);
+        nave->estabilidad_pct -= 20.0f;
+    }
+}
