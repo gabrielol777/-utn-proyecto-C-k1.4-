@@ -1,5 +1,5 @@
 # -utn-proyecto-C-k1.4-
-//aclaracion: se puede ver desprolijo desde fuera, ingresar o descargar a archivo readme para mayor claridad
+//aclaracion: se puede ver desprolijo desde fuera, seleccionar opcion CODE o descargar a archivo readme para mayor claridad
 simulador interactivo de una experiencia de manejo por consola del estado orbital de la nave Orion! adentrate y experimenta distintas fases desafia pero divertidas
 
  ------------------------ I N T E G R A N T E S ---------------------------------------------------------------------------------
