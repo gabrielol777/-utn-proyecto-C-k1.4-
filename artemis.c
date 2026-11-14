@@ -131,6 +131,6 @@ void generar_reporte_final(const EstadoOrbitalLEO *nave) {
     printf(" Desviacion Propulsor:       %.2f m\n", nave->desviacion_lateral);
     printf(" Pruebas Superadas:          %d / 4\n", nave->pruebas_superadas);
     printf(" Estabilidad Final:          %.1f%%\n", nave->estabilidad_pct);
-    printf(" Estado Final:               %s\n", (nave->estabilidad_pct >= 70.0) ? "ÉXITO DE ORBITA" : "MISIÓN FALLIDA");
+    printf(" Estado Final:               %s\n", (nave->estabilidad_pct >= 70.0) ? "ÉXITO DE ORBITA" : "MISION FALLIDA");
     printf("====================================================================\n");
 } 
