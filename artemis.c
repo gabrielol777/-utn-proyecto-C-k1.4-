@@ -31,7 +31,24 @@ void inicializar_nave(EstadoOrbitalLEO *nave) {
     nave->estabilidad_pct = 100.0f;
     nave->pruebas_superadas = 0;
 } 
-
+void mostrar_reglas(void) {
+    printf("\n============================================================\n");
+    printf("                  REGLAS DE LA MISION ARTEMIS II            \n");
+    printf("============================================================\n");
+    printf(" Bienvenido Comandante. El objetivo de la mision es completar\n");
+    printf(" exitosamente las fases de insercion y calculo orbital en LEO.\n");
+    printf("\n");
+    printf(" - Secuencia: El juego avanzara fase por fase de forma automatica.\n");
+    printf(" - Calculos: En cada fase se te pedira ingresar un valor fisico\n");
+    printf("   basado en los datos mostrados (velocidad, periodo, etc.).\n");
+    printf(" - Estabilidad: Cada error reducirá el porcentaje de estabilidad\n");
+    printf("   de la nave Orion. Si cometes muchos errores, la mision fallara.\n");
+    printf(" - Reporte: Al finalizar la ultima fase, se generara el informe\n");
+    printf("   de mision completada o fallida segun tu desempeno.\n");
+    printf("============================================================\n");
+    printf("Presione Enter para volver al menu principal...");
+    getchar(); // Pausa para que el usuario lea
+}
 void ejecutar_fase_demostracion(EstadoOrbitalLEO *nave) {
     printf("\n[FASE 1]: Analisis de Fuerza Gravitatoria como Fuerza Centripeta\n");
     printf("------------------------------------------------------------\n");

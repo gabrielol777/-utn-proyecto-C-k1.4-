@@ -33,7 +33,7 @@ int main() {
                 ejecutar_fase_demostracion(&nave);      // Fase 1: Velocidad Orbital
                 ejecutar_fase_calculo_periodo(&nave);    // Fase 2: Periodo Orbital
                 ejecutar_fase_aceleracion_centripeta(&nave); // Fase 3: Aceleracion Centripeta
-                ejecutar_fase_pulso_propulsor(&nave);     // Fase 4: Evento Deriva / Propulsor
+                ejecutar_fase_evento_propulsor(&nave);     // Fase 4: Evento Deriva / Propulsor
                 
                 generar_reporte_final(&nave);
                 
