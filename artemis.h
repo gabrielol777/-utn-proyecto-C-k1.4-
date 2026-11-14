@@ -23,8 +23,7 @@ typedef struct {
     int pruebas_superadas;
 } EstadoOrbitalLEO;
 void inicializar_nave(EstadoOrbitalLEO *nave);
-void mostrar_encabezado();
-void mostrar_menu();
+void mostrar_reglas();
 void ejecutar_fase_demostracion(EstadoOrbitalLEO *nave);
 void ejecutar_fase_calculo_periodo(EstadoOrbitalLEO *nave);
 void ejecutar_fase_aceleracion_centripeta(EstadoOrbitalLEO *nave);

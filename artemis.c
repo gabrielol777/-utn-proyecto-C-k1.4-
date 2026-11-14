@@ -47,7 +47,7 @@ void mostrar_reglas(void) {
     printf("   de mision completada o fallida segun tu desempeno.\n");
     printf("============================================================\n");
     printf("Presione Enter para volver al menu principal...");
-    getchar(); // Pausa para que el usuario lea
+    getchar(); 
 }
 void ejecutar_fase_demostracion(EstadoOrbitalLEO *nave) {
     printf("\n[FASE 1]: Analisis de Fuerza Gravitatoria como Fuerza Centripeta\n");
