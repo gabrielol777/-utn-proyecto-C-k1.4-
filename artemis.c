@@ -121,7 +121,7 @@ void ejecutar_fase_evento_propulsor(EstadoOrbitalLEO *nave) {
 } 
 void generar_reporte_final(const EstadoOrbitalLEO *nave) {
     printf("\n====================================================================\n");
-    printf("                  REPORTE FINAL DE MISIÓN ARTEMIS LEO\n");
+    printf("                  REPORTE FINAL DE MISION ARTEMIS LEO\n");
     printf("====================================================================\n");
     printf(" Mision:                     %s\n", nave->nombre_mision);
     printf(" Radio Orbital Total (r):    %.2f km\n", nave->radio_orbital / 1000.0);
