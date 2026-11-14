@@ -47,6 +47,11 @@ void mostrar_menu() {
 } 
 void ejecutar_fase_demostracion(EstadoOrbitalLEO *nave) {
     printf("\n[FASE 1]: Analisis de Fuerza Gravitatoria como Fuerza Centripeta\n");
+    printf("------------------------------------------------------------\n");
+    printf(" Datos de la mision actual:\n");
+    printf(" - Radio orbital de la nave: %.2f metros\n", nave->radio_orbital);
+    printf(" - Masa de la Tierra (M): Referencia orbital LEO\n");
+    printf("------------------------------------------------------------\n");
     printf(" Demuestre el modulo de velocidad orbital v (m/s).\n");
     
     double respuesta = leer_flotante_seguro(" Ingrese la velocidad calculada (m/s): ", 1000.0, 20000.0);
