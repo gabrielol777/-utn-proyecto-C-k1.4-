@@ -50,7 +50,7 @@ void ejecutar_fase_demostracion(EstadoOrbitalLEO *nave) {
     printf("------------------------------------------------------------\n");
     printf(" Datos de la mision actual:\n");
     printf(" - Radio orbital de la nave: %.2f metros\n", nave->radio_orbital);
-    printf(" - Masa de la Tierra (M): Referencia orbital LEO\n");
+    printf(" - Masa de la Tierra (M): %.4e kg\n", MASA_TIERRA);
     printf("------------------------------------------------------------\n");
     printf(" Demuestre el modulo de velocidad orbital v (m/s).\n");
     
