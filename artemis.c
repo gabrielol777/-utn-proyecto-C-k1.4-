@@ -6,7 +6,10 @@
 #include <math.h>
 #include <string.h>
 #include "artemis.h"
-#include "validaciones.h" 
+#include "validaciones.h"
+#ifndef M_PI
+#define M_PI 3.14159265358979323846
+#endif 
 
 void inicializar_nave(EstadoOrbitalLEO *nave) {
     strcpy(nave->nombre_mision, "Artemis II LEO Mission");
