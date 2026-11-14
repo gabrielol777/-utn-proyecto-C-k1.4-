@@ -1,5 +1,6 @@
 # -utn-proyecto-C-k1.4-
-simulador interactivo de una experiencia de manejo por consola del estado orbital de la nave Orion! adentrate y experimenta distintas fases desafiantes pero divertidas
+//aclaracion: se puede ver desprolijo desde fuera, ingresar o descargar a archivo readme para mayor claridad
+simulador interactivo de una experiencia de manejo por consola del estado orbital de la nave Orion! adentrate y experimenta distintas fases desafia pero divertidas
 
  ------------------------ I N T E G R A N T E S ---------------------------------------------------------------------------------
  - Aquino Gabriel Lautaro     - legajo:30168
@@ -82,6 +83,8 @@ acto seguido introducir la linea:
 \.artemis_sim.exe
 
 Y asi podras ejecutar el juego! 
+
+
 
 
 
