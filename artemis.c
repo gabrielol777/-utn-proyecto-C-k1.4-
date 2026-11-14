@@ -92,4 +92,19 @@ void ejecutar_fase_evento_propulsor(EstadoOrbitalLEO *nave) {
         printf(" -> [FALLO] Deriva no compensada. Desviacion real: %.2f m\n", nave->desviacion_lateral);
         nave->estabilidad_pct -= 20.0f;
     }
-}
+} 
+void generar_reporte_final(const EstadoOrbitalLEO *nave) {
+    printf("\n====================================================================\n");
+    printf("                  REPORTE FINAL DE MISIÓN ARTEMIS LEO\n");
+    printf("====================================================================\n");
+    printf(" Mision:                     %s\n", nave->nombre_mision);
+    printf(" Radio Orbital Total (r):    %.2f km\n", nave->radio_orbital / 1000.0);
+    printf(" Velocidad Orbital (v):      %.2f m/s\n", nave->velocidad_orbital);
+    printf(" Periodo Orbital (T):        %.2f s (%.2f min)\n", nave->periodo_segundos, nave->periodo_minutos);
+    printf(" Aceleracion Centripeta:    %.2f m/s^2\n", nave->aceleracion_c);
+    printf(" Desviacion Propulsor:       %.2f m\n", nave->desviacion_lateral);
+    printf(" Pruebas Superadas:          %d / 4\n", nave->pruebas_superadas);
+    printf(" Estabilidad Final:          %.1f%%\n", nave->estabilidad_pct);
+    printf(" Estado Final:               %s\n", (nave->estabilidad_pct >= 70.0) ? "ÉXITO DE ORBITA" : "MISIÓN FALLIDA");
+    printf("====================================================================\n");
+} 
