@@ -70,6 +70,13 @@ void ejecutar_fase_demostracion(EstadoOrbitalLEO *nave) {
 }
 void ejecutar_fase_calculo_periodo(EstadoOrbitalLEO *nave) {
     printf("\n[FASE 2]: Calculo del Periodo Orbital (T)\n");
+    printf("------------------------------------------------------------\n");
+    printf(" Datos de la mision actual:\n");
+    printf(" - Radio orbital: %.2f metros\n", nave->radio_orbital);
+    printf(" - Velocidad orbital actual: %.2f m/s\n", nave->velocidad_orbital);
+    printf("------------------------------------------------------------\n");
+    printf(" Calcule el periodo T en minutos (T = 2 * pi * r / v convertidos a minutos).\n");
+    
     double t_min = leer_flotante_seguro(" Ingrese el periodo T en MINUTOS: ", 10.0, 300.0);
     
     if (fabs(t_min - nave->periodo_minutos) < 2.0) {
@@ -82,6 +89,13 @@ void ejecutar_fase_calculo_periodo(EstadoOrbitalLEO *nave) {
 }
 void ejecutar_fase_aceleracion_centripeta(EstadoOrbitalLEO *nave) {
     printf("\n[FASE 3]: Evaluacion de Aceleracion Centripeta\n");
+    printf("------------------------------------------------------------\n");
+    printf(" Datos de la mision actual:\n");
+    printf(" - Velocidad orbital: %.2f m/s\n", nave->velocidad_orbital);
+    printf(" - Radio orbital: %.2f metros\n", nave->radio_orbital);
+    printf("------------------------------------------------------------\n");
+    printf(" Calcule la aceleracion centripeta ac (m/s^2) (ac = v^2 / r).\n");
+    
     double ac = leer_flotante_seguro(" Ingrese la aceleracion centripeta (m/s^2): ", 1.0, 50.0);
     
     if (fabs(ac - nave->aceleracion_c) < 0.5) {
